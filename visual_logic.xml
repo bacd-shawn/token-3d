@@ -1,0 +1,198 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="init" type="InitTab" active="false" scrollx="782" scrolly="451.5000000000002" scale="0.9"></tab>
+  <tab name="main" type="MainTab" active="true" scrollx="905.8909788421554" scrolly="611.2233096013522" scale="0.7462153966366275">
+    <variables xmlns="https://developers.google.com/blockly/xml">
+      <variable id="+/4Y^Q%c/Z|LS2_oL-Nc" type="">video_pulsation</variable>
+      <variable id="FA)8[KgEp=kD(sYX?n%m" type="">video_electrod</variable>
+    </variables>
+    <block xmlns="https://developers.google.com/blockly/xml" type="autoRotateCamera" id="[}4MRs,)NEp$*8jeef,1" x="-890" y="-524">
+      <field name="ON_OFF">ON</field>
+      <value name="SPEED">
+        <shadow type="math_number" id="{!J;^(9vk4s~96TjDls.">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <next>
+        <block type="variables_set" id="mE-eVQW[,iSwi8M?b)cr">
+          <field name="VAR" id="+/4Y^Q%c/Z|LS2_oL-Nc">video_pulsation</field>
+          <value name="VALUE">
+            <block type="loadVideo" id="n1;td+6B-(K%wjl*#r0x">
+              <value name="URL">
+                <shadow type="text">
+                  <field name="TEXT">./myVideo.mp4</field>
+                </shadow>
+                <block type="text" id="O:[tT:UZc@Ixx]::Z(^:">
+                  <field name="TEXT">./video_pulsation.webm</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <next>
+            <block type="variables_set" id="mnowL4CXk0gnBs,x;ObM">
+              <field name="VAR" id="FA)8[KgEp=kD(sYX?n%m">video_electrod</field>
+              <value name="VALUE">
+                <block type="loadVideo" id="E`!q^,ToWyAv`nq=G=~R">
+                  <value name="URL">
+                    <shadow type="text" id="{A@0)?ebUI!$o!4KXOHt">
+                      <field name="TEXT">./myVideo.mp4</field>
+                    </shadow>
+                    <block type="text" id="K7;DlL2|5OQZAuqXBmR1">
+                      <field name="TEXT">./video_electrod_1.webm</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="setScreenScale" id="2XRhyBzRu3!s.x--BHL(">
+                  <value name="FACTOR">
+                    <shadow type="math_number" id="UuhL47j85{fyle#x-`qO">
+                      <field name="NUM">2</field>
+                    </shadow>
+                    <block type="nativeScreenScale" id="0UJ}]$O?gZr9;.ICSSdz"/>
+                  </value>
+                  <next>
+                    <block type="replaceTexture" id="2Dr:t.7#{/U{Nm(SD8if">
+                      <mutation xmlns="http://www.w3.org/1999/xhtml" enabledoslot="true" flextexinput="false"></mutation>
+                      <field name="OLD_TEX_NAME">video_pulsation.jpg</field>
+                      <value name="MATERIAL">
+                        <shadow type="materialList">
+                          <field name="FIELDNAME">glow_mat</field>
+                        </shadow>
+                        <block type="materialList" id="|K{r;*9~Ht#F_-%U(/;H">
+                          <field name="FIELDNAME">glow_mat</field>
+                        </block>
+                      </value>
+                      <value name="NEW_TEX_URL">
+                        <shadow type="text" id="*yJ0?l,{UxpJy:)5OLlT">
+                          <field name="TEXT">video_pulsation.webm</field>
+                        </shadow>
+                        <block type="variables_get" id="Nek^Az7gu#MEMy.HCxn5">
+                          <field name="VAR" id="+/4Y^Q%c/Z|LS2_oL-Nc">video_pulsation</field>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="playSound" id="3vHd7_6FRg$1_$L%)[?=">
+                          <field name="LOOP">TRUE</field>
+                          <value name="VALUE">
+                            <block type="variables_get" id="Wnb/l(}:7Ey)(HRz@#Jo">
+                              <field name="VAR" id="+/4Y^Q%c/Z|LS2_oL-Nc">video_pulsation</field>
+                            </block>
+                          </value>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="replaceTexture" id="rqiAx/$6,FIM$=(FgX|{">
+                          <mutation xmlns="http://www.w3.org/1999/xhtml" enabledoslot="true" flextexinput="false"></mutation>
+                          <field name="OLD_TEX_NAME">video_electrod_1.jpg</field>
+                          <value name="MATERIAL">
+                            <shadow type="materialList">
+                              <field name="FIELDNAME">glow_mat</field>
+                            </shadow>
+                            <block type="materialList" id="[c+nQR,8XZ-2Dut%Fv/.">
+                              <field name="FIELDNAME">glow_mat</field>
+                            </block>
+                          </value>
+                          <value name="NEW_TEX_URL">
+                            <shadow type="text">
+                              <field name="TEXT">video_pulsation.webm</field>
+                            </shadow>
+                            <block type="variables_get" id="xkbEH81iud@K=PyipR4B">
+                              <field name="VAR" id="FA)8[KgEp=kD(sYX?n%m">video_electrod</field>
+                            </block>
+                          </value>
+                          <statement name="DO">
+                            <block type="playSound" id="n8oi|@MF;X@fVa.2-M0F">
+                              <field name="LOOP">TRUE</field>
+                              <value name="VALUE">
+                                <block type="variables_get" id="JOWlN$gz1AXZcYyb8/4w">
+                                  <field name="VAR" id="FA)8[KgEp=kD(sYX?n%m">video_electrod</field>
+                                </block>
+                              </value>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="whenClicked" id="0pMuR[*MDgU!CCFX(hCs">
+                              <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+                              <field name="X_RAY">FALSE</field>
+                              <field name="DOUBLE_CLICK">FALSE</field>
+                              <field name="LEFT_BUTTON">TRUE</field>
+                              <field name="MIDDLE_BUTTON">TRUE</field>
+                              <field name="RIGHT_BUTTON">TRUE</field>
+                              <value name="VALUE">
+                                <shadow type="objectList" id="D3^,dWCA$JhXb3d3`5Gu">
+                                  <field name="FIELDNAME">bloom</field>
+                                </shadow>
+                              </value>
+                              <statement name="DO">
+                                <block type="playSound" id="9{P_p[5XpQqGd1Foywez">
+                                  <field name="LOOP">TRUE</field>
+                                  <value name="VALUE">
+                                    <block type="variables_get" id="/.FwZK!z-FBh#B3+FQ%4">
+                                      <field name="VAR" id="FA)8[KgEp=kD(sYX?n%m">video_electrod</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="playSound" id="VB/7@wF)X2tKV+D%9}QQ">
+                                      <field name="LOOP">TRUE</field>
+                                      <value name="VALUE">
+                                        <block type="variables_get" id="pD+_muwbR9kj4ywD^tNK">
+                                          <field name="VAR" id="+/4Y^Q%c/Z|LS2_oL-Nc">video_pulsation</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                              <next>
+                                <block type="comment" id="zn}gAK`X]%Q?Il_JHy}!">
+                                  <field name="TEXT">set_glow_color</field>
+                                  <next>
+                                    <block type="setMaterialColor" id="v9hzMmCINwdmWx{Xd`ZQ">
+                                      <mutation xmlns="http://www.w3.org/1999/xhtml" flexcolinput="false" usecsscolor="true"></mutation>
+                                      <field name="MAT_COL_NAME">pulsation_rgb</field>
+                                      <value name="MATERIAL">
+                                        <shadow type="materialList" id="MUt!Y,M79;-q%zqsR9Ki">
+                                          <field name="FIELDNAME">glow_mat</field>
+                                        </shadow>
+                                      </value>
+                                      <value name="CSS">
+                                        <block type="text" id="l,D31rUc6rrhY=xWvz?W">
+                                          <field name="TEXT">#00FF00</field>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="setMaterialColor" id="t+Sr)YM(:|Ob)v;]M,bo">
+                                          <mutation xmlns="http://www.w3.org/1999/xhtml" flexcolinput="false" usecsscolor="true"></mutation>
+                                          <field name="MAT_COL_NAME">electro_rgb</field>
+                                          <value name="MATERIAL">
+                                            <shadow type="materialList" id="+jME@=A:/WF$F~9!mcfD">
+                                              <field name="FIELDNAME">glow_mat</field>
+                                            </shadow>
+                                          </value>
+                                          <value name="CSS">
+                                            <block type="text" id="4$s:4x6}i1W/p9:{Mlvj">
+                                              <field name="TEXT">#00FF00</field>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+  </tab>
+  <editorsettings viewport-x="1134" viewport-y="28" viewport-w="768" viewport-h="863.5" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>
